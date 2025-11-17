@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Layanan — Desa Sruwen</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- global styles (tetap dipakai) -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- halaman layanan (scoped) -->
+  <link rel="stylesheet" href="css/layanan.css">
+</head>
+<body class="layanan-page">
+  <header>
+    <div class="nav-wrap">
+      <div class="logo">
+        <img src="C:\Users\Lenovo\OneDrive\Documents\kkn\website desa sruwen2\assets\logo kabupaten smg2.png" alt="logo desa">
+        <div>
+          <div class="site-title">Pemerintah Desa</div>
+          <div class="muted-note">Desa Sruwen</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profil desa.html">Profil Desa</a></li>
+          <li><a href="infografis.html">Infografis</a></li>
+          <li><a href="potensi umkm.html">Potensi UMKM</a></li>
+          <li><a href="layanan.html">Layanan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero title (white band, centered) -->
+    <section class="page-hero">
+      <h1 class="hero-title">Layanan</h1>
+    </section>
+
+    <!-- layanan contact area (full-bleed pale box) -->
+    <section id="layanan" class="layanan-area" aria-labelledby="layanan-title">
+      <div class="layanan-inner">
+        <!-- kolom kiri: logo + alamat -->
+        <div class="col col-left" role="region" aria-label="Alamat kantor desa">
+          <div class="layanan-logo" aria-hidden="true">
+            <img src="C:\Users\Lenovo\OneDrive\Documents\kkn\website desa sruwen2\assets\logo kabupaten smg2.png" alt="Logo Kabupaten Semarang">
+          </div>
+          <div class="col-info">
+            <h3 class="col-title">Pemerintah Desa Sruwen</h3>
+            <p class="addr">Jln. Kemetiran No. 84 RT 005 RW 001,<br>Dusun Sruwen I</p>
+          </div>
+        </div>
+
+        <!-- kolom tengah: waktu layanan -->
+        <div class="col col-center" role="region" aria-label="Waktu layanan">
+          <h3 class="col-title">Waktu Layanan</h3>
+          <p class="muted">
+            Senin - Kamis : 08.00 - 14.00<br>
+            Jumat : 08.00 - 11.00
+          </p>
+        </div>
+
+        <!-- kolom kanan: kontak -->
+        <!-- kolom kanan: kontak (ganti whole .col-right block) -->
+        <div class="col col-right" role="region" aria-label="Kontak">
+          <h3 class="col-title">Hubungi Kami</h3>
+
+          <ul class="contact-list" aria-label="Informasi kontak">
+            <li class="contact-item">
+              <img class="contact-icon" src="C:\Users\Lenovo\OneDrive\Documents\kkn\website desa sruwen2\assets\logo telp.png" alt="Telepon">
+              <a class="contact-text phone-link" href="tel:089530407010">089530407010</a>
+            </li>
+
+            <li class="contact-item">
+              <img class="contact-icon" src="C:\Users\Lenovo\OneDrive\Documents\kkn\website desa sruwen2\assets\logo email.png" alt="Email">
+              <a class="contact-text email-link" href="mailto:pemdes.sruwen@gmail.com">pemdes.sruwen@gmail.com</a>
+            </li>
+
+            <li class="contact-item">
+              <img class="contact-icon" src="C:\Users\Lenovo\OneDrive\Documents\kkn\website desa sruwen2\assets\logo instagram.png" alt="Instagram">
+              <span class="contact-text">@pemerintah.desa.sruwen</span>
+            </li>
+
+            <li class="contact-item">
+              <img class="contact-icon" src="C:\Users\Lenovo\OneDrive\Documents\kkn\website desa sruwen2\assets\logo facebook.png" alt="Facebook">
+              <span class="contact-text">pemerintah.desa.sruwen</span>
+            </li>
+          </ul>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- small interaction script (copy email to clipboard) -->
+  <script>
+    (function(){
+      const mail = document.querySelector('.email-link');
+      if(mail){
+        mail.addEventListener('click', function(e){
+          // keep normal mailto but also copy to clipboard
+          const email = this.getAttribute('href').replace('mailto:','');
+          // try copy silently (if allowed)
+          if(navigator.clipboard){
+            navigator.clipboard.writeText(email).catch(()=>{});
+          }
+          // allow default navigation to mail client
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
